@@ -33,7 +33,7 @@ html {
     "header header header header"
     "center center center center"
     "center center center center"
-    "bl footer footer .";
+    "footer footer footer footer";
 }
 .header {
     grid-area: header;
