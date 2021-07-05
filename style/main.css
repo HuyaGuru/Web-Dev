@@ -266,7 +266,7 @@ html {
     .header {
         column-gap: 3rem;
     }
-    .logo, .tag {
+    .logo, .tag, .cta {
         font-size: 1.8rem;
     }
     .nav, .subtag {
