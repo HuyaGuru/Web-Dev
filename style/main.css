@@ -97,9 +97,9 @@ html {
     grid-area: colors;
     display: flex;
     justify-content: left;
-    padding-top: 1rem;
     writing-mode: vertical-lr;
     z-index: 1;
+    padding-top: 1rem;
 }
 .color {
     width: 1rem;
