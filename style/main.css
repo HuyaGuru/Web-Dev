@@ -96,7 +96,9 @@ html {
     padding-bottom: 1rem;
     grid-area: colors;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    padding-top: 1rem;
+    writing-mode: vertical-lr;
     z-index: 1;
 }
 .color {
@@ -119,8 +121,8 @@ html {
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-areas:
     ". . . right"
-    ". colors colors ."
-    ". center-icon center-icon ."
+    ". . . ."
+    "colors center-icon center-icon ."
     "left . . .";
     background-color: var(--bg-color);
     background-blend-mode: multiply;
