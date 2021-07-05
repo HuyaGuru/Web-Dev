@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 :root {
-    color: white;
+    color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.09rem;
+    --bg-color: white;
+    --text-color: #262424;
 }
 p {
     margin: 0;
@@ -26,9 +28,9 @@ html {
     box-sizing: border-box;
     height: 100vh;
     padding: 1rem 0rem;
-    background-color: #262424;
+    background-color: var(--bg-color);
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
     "header header header header"
     "center center center center"
@@ -56,6 +58,9 @@ html {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    /* background-color: rgba(185, 219, 48, 0.9); */
+    padding: 0rem 1rem;
+    border: var(--text-color) 0.1rem solid;
 }
 .nav {
     grid-area: nav;
@@ -68,17 +73,16 @@ html {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
     column-gap: 5rem;
-    color: #e5e5e5;
 }
 .nav-list-item {
     cursor: pointer;
 }
 .nav-list-item:hover, .nav-list-item:focus {
-    border-bottom: 0.15rem solid rgba(185, 219, 48, 0.9);
+    border-bottom: 0.15rem solid var(--text-color);
     animation-name: strike;
     animation-duration: 50ms;
-    color: white;
-    background-color: rgba(185, 219, 48, 0.1);
+    color: var(--text-color);
+    background-color: #26242427;
 }
 @keyframes strike {
     from {
@@ -100,7 +104,7 @@ html {
     height: 1rem;
 }
 .bg-white {
-    background-color: white;
+    background-color: rgba(185, 219, 48, 0.9);
 }
 .bg-blue {
     background-color: #248ADB;
@@ -118,9 +122,9 @@ html {
     ". colors colors ."
     ". center-icon center-icon ."
     "left . . .";
-    background-color: #262424;
+    background-color: var(--bg-color);
     background-blend-mode: multiply;
-    background-image: url('../images/lappy.jpg');
+    /* background-image: url('../images/lappy.jpg'); */
     background-size: cover;
     overflow: hidden;
 }
@@ -129,13 +133,13 @@ html {
     background-size: cover;
 }
 .right {
-    background-image: url('../images/Vector1.svg');
+    /* background-image: url('../images/Vector1.svg'); */
     grid-area: right;
     text-align: right;
     vertical-align: top;
 }
 .left {
-    background-image: url('../images/Vector2.svg');
+    /* background-image: url('../images/Vector2.svg'); */
     grid-area: left;
     text-align: left;
 }
@@ -174,8 +178,9 @@ html {
     grid-area: text1;
     text-align: center;
     height: max-content;
-    border: white 0.1rem solid;
-    transition: background-color 100ms ease;
+    border: var(--text-color) 0.1rem solid;
+    background-color: var(--text-color);
+    color: var(--bg-color);
 
 }
 .vertical {
@@ -186,7 +191,7 @@ html {
     height: max-content;
 }
 .vertical-item {
-    border: white 0.1rem solid;
+    border: var(--text-color) 0.1rem solid;
     height: max-content;
     padding: 0.45rem 0rem;
     transition: background-color 100ms ease;
@@ -217,7 +222,7 @@ html {
 .cta {
     width: max-content;
     justify-self: center;
-    border: white 0.1rem solid;
+    border: var(--text-color) 0.1rem solid;
     font-size: 12pt;
     padding: 0.4rem 1.4rem;
     font-weight: 700;
@@ -226,9 +231,9 @@ html {
 .text1, .vertical-item {
     cursor: pointer;
 }
-.text1:hover, .vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus {
-    color: #262424;
-    background-color: white;
+.vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus {
+    color: var(--bg-color);
+    background-color: var(--text-color);
 }
 @media screen and (max-width: 700px) {
     html {
@@ -255,5 +260,17 @@ html {
     .color {
         width: 1.6rem;
         height: 1.6rem;
+    }
+    .header {
+        column-gap: 3rem;
+    }
+    .logo, .tag {
+        font-size: 1.8rem;
+    }
+    .nav, .subtag {
+        font-size: 1.6rem;
+    }
+    .nav-list {
+        column-gap: 1.5rem;
     }
 }
