@@ -223,7 +223,7 @@ html {
     width: max-content;
     justify-self: center;
     border: var(--text-color) 0.1rem solid;
-    font-size: 12pt;
+    font-size: 1rem;
     padding: 0.4rem 1.4rem;
     font-weight: 700;
     transition: background-color 100ms ease;
@@ -231,7 +231,7 @@ html {
 .text1, .vertical-item {
     cursor: pointer;
 }
-.vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus {
+.vertical-item:hover, .cta:hover, .vertical-item:active, .text1:active, .vertical-item:focus, .logo:hover {
     color: var(--bg-color);
     background-color: var(--text-color);
 }
